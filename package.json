@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "body-parser": "^1.14.2",
-    "bootstrap": "^3.3.6",
     "express": "^4.13.3",
     "mongoose": "^4.3.3"
   }
