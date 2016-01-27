@@ -94,7 +94,7 @@
 
 /* Mobile */
 
-@media(max-width: 768px) {
+@media(max-width: 1024px) {
   .navbar-vertical-left {
     position: fixed;
     top: auto;
