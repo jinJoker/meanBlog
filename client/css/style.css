@@ -2,6 +2,10 @@ body {
     font-family: museo-slab, Georgia, "Times New Roman", Times, serif;
 }
 
+.jin-page-buttom-margin {
+    margin-bottom: 70px;
+}
+
 .jin-shadow:hover {
     box-shadow:1px 1px 40px #292929;
 }
