@@ -1,16 +1,18 @@
 <!DOCTPYE html>
-<html>
+<html ng-app="blogApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>种牛牛后花园</title>
 
-        <!-- Bootstrap --><!-- Latest compiled and minified CSS -->
+        <!-- css -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/bootstrap-vertical-menu.css" rel="stylesheet">
-        <link href="/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-csp.css">
+        
+        <link rel="stylesheet" href="/css/bootstrap-vertical-menu.css">
+        <link rel="stylesheet" href="/css/style.css">
 
     </head>
     <body>
@@ -18,7 +20,7 @@
             <ul class="nav navbar-nav">
                 <li>
                     <a href>
-                        <i class="fa fa-fort-awesome"></i>
+                        <i class="fa fa-fw fa-lg fa-fort-awesome"></i>
                         <span>home</span>
                     </a>
                 </li>
@@ -49,24 +51,24 @@
             <div class=""><i class="fa fa-chevron-right fa-3x"></i></div>
             
         </div>
-        <div class="container jin-page-buttom-margin">
-            <div class="panel panel-info jin-shadow">
+        <p class="jin-font-blue jin-title-h1" ng-hide="true"><i class="fa fa-spinner fa-3x"></i><span>加载中 ...</span></p>
+        <div class="container jin-page-buttom-margin" ng-controller="blogPanelController" ng-cloak>
+            <div class="panel panel-info jin-shadow" ng-repeat="blog in blogs">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Starting build blog site with MEAN Stack</h3>
+                    <h3 class="panel-title">{{blog.title}}</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" ng-bind-html="blog.content | trusthtml">
                     <!-- Hello world blog -->
-                    <span>Actually, this is the first diliveried version, and without any backend database running.</span></br>
-                    <span>The most difficult thing to me is that how to use HTML/CSS, or we call it HTML5 to build the frontend.</span></br>
-                    <span>But sooner or later, I think I will get used of these staff.</span></br>
-                    <span>Here are the list of component or site or whatever I used:</span></br>
-                    <span>VPS: DigitalOcean</span></br>
-                    <span>Linux: Ubuntu</span></br>
-                    <span>DNS: oray.com</span></br>
-                    <span>Framework: MEAN stack</span></br>
-                    <span>git: jinJoker/meanBlog</span></br>
-            </div>
+                    {{blog.content}}
+                </div>
             </div>
         </div>
+        <script type="text/javascript" src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>
+        <script type="text/javascript" src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-route.min.js"></script>
+        <script type="text/javascript" src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-resource.min.js"></script>
+        <script type="text/javascript" src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="/js/blog-app.js"></script>
+        <script type="text/javascript" src="/js/controllers/blog-panel-controller.js"></script>
+        
     </body>
 </html>

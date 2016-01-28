@@ -40,13 +40,14 @@
 }
 
 /* Colors */
-
+/*color: #ecf0f1;*/
 .navbar-vertical-left {
   background: #3bb8e1;
   color: #ecf0f1;
 }
 
 .navbar-vertical-left ul.navbar-nav > li > a {
+  background: #3bb8e1;
   color: #ecf0f1;
 }
 
@@ -57,6 +58,10 @@
 
 .navbar-vertical-left ul.navbar-nav > li > a.selected {
   background: #d35400;
+}
+
+.navbar-vertical-left ul.navbar-nav > li > a.visited {
+  background: #3bb8e1;
 }
 
 /* Animation */
