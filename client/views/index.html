@@ -16,6 +16,8 @@
 
     </head>
     <body>
+        <div id="overlay" class="jin-overlay" onclick="removeFloatLayer()"></div>
+        <div id="popup" class="jin-popup">just for test</div>
         <nav class="navbar navbar-vertical-left jin-shadow">
             <ul class="nav navbar-nav">
                 <li>
@@ -55,7 +57,7 @@
         <div class="container jin-page-buttom-margin" ng-controller="blogPanelController" ng-cloak>
             <div class="panel panel-info jin-shadow" ng-repeat="blog in blogs">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{blog.title}}</h3>
+                    <h3 class="panel-title" onclick="generateFloatLayer()">{{blog.title}}</h3>
                 </div>
                 <div class="panel-body" ng-bind-html="blog.content | trusthtml">
                     <!-- Hello world blog -->
@@ -69,6 +71,7 @@
         <script type="text/javascript" src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-sanitize.min.js"></script>
         <script type="text/javascript" src="/js/blog-app.js"></script>
         <script type="text/javascript" src="/js/controllers/blog-panel-controller.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
         
     </body>
 </html>

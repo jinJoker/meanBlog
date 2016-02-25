@@ -2,6 +2,24 @@ body {
     font-family: museo-slab, Georgia, "Times New Roman", Times, serif;
 }
 
+.jin-overlay {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.jin-popup{
+    position: absolute;
+    display: none;
+    width: 60%;
+    height: 60%;
+    background-color: azure;
+    z-index: 101;
+}
+
 .jin-page-buttom-margin {
     margin-bottom: 70px;
 }
@@ -43,7 +61,6 @@ body {
     margin-right: 107px;
     font-family: 微软雅黑;
 }
-
 
 @media screen and (max-width: 1024px) {
     .jin-title-margin {
