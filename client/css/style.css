@@ -18,6 +18,7 @@ body {
     height: 60%;
     background-color: azure;
     z-index: 101;
+    box-shadow:1px 1px 40px #292929;
 }
 
 .jin-page-buttom-margin {
