@@ -1,9 +1,11 @@
-function generateFloatLayer(){
-    document.getElementById('overlay').style.display = "block";
-    document.getElementById('popup').style.display = "block";
-    popupCenter('popup');
-    document.body.style.overflow = "hidden";
-    document.getElementById('overlay').style.top = document.body.scrollTop;
+
+function generateFloatLayer(timestamp) {
+        document.getElementById('overlay').style.display = "block";
+        document.getElementById('popup').style.display = "block";
+        popupCenter('popup');
+        document.body.style.overflow = "hidden";
+        document.getElementById('overlay').style.top = document.body.scrollTop;
+        console.log(timestamp);
 }
 
 // set the popup bottun to center

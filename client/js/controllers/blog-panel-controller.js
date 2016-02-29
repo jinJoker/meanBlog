@@ -4,10 +4,10 @@ blogApp.controller("blogPanelController",['$scope','$resource',function($scope,$
     blogs.query(function(results) {
         $scope.blogs = results;
     })
+    
+    $scope.generateFloatLayer = function(timestamp){
+        generateFloatLayer(timestamp);
+    };
+    
 }]);
 
-blogApp.filter('trusthtml', ['$sce', function ($sce) {
-    return function(t) {
-        return $sce.trustAsHtml(t)
-    }
-}]);
