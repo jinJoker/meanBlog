@@ -1,4 +1,4 @@
-var router = require('./server/controllers/blogDBService.js');
+var blogDBService = require('./server/controllers/blogDBService.js');
 
 module.exports = function(app){
 
@@ -6,5 +6,9 @@ module.exports = function(app){
         res.sendfile(__dirname + '/client/views/index.html');
     });
 
-    app.get('/api/blogs', router.list);
+    app.get('/api/blog-list', blogDBService.list);
+    
+    app.get('/api/blogs/:ts?', blogDBService.detail);
+    
+    
 }

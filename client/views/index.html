@@ -18,10 +18,11 @@
     <body>
 <!-- for overlay to display detail -->
         <div id="overlay" class="jin-overlay" onclick="removeFloatLayer()"></div>
-        <div id="popup" class="jin-popup" ng-controller="blogDetailController" ng-cloak>
-                <div ng-bind-html="detail | trusthtml">
+        <div id="popup" class="jin-popup" ng-controller="blogPanelController" ng-cloak>
+                <span ng-bind="test"></span>
+                <div ng-bind-html="detail.content | trusthtml">
                     <!-- Hello world blog -->
-
+                    {{detail.content}}
                  </div>
         </div>
 
@@ -90,7 +91,6 @@
         <script type="text/javascript" src="/js/blog-app.js"></script>
         <script type="text/javascript" src="/js/controllers/blog-panel-controller.js"></script>
         <script type="text/javascript" src="/js/controllers/blog-filter.js"></script>
-        <script type="text/javascript" src="/js/controllers/blog-detail-controller.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>
         
     </body>
